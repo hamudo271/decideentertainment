@@ -252,3 +252,47 @@
   .timeline-container { padding-left: 0; }
   .history-row { flex-direction: column; gap: 20px; }
 }
+
+@media (max-width: 768px) {
+  /* Mobile Adjustments */
+  .hist-section {
+    padding: 100px 20px;
+  }
+
+  .hist-hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  /* Philosophy */
+  .phil-main-text {
+    font-size: 1.8rem;
+    line-height: 1.4;
+  }
+  
+  /* Network */
+  .net-overlay-text {
+    font-size: 2rem;
+  }
+  
+  .network-info h3 {
+    font-size: 2rem;
+  }
+  
+  .net-main-desc {
+    font-size: 1.1rem;
+  }
+  
+  /* Future Roadmap */
+  .timeline-section h2 {
+    font-size: 3rem; /* Clamp from 10rem/5rem */
+    margin-bottom: 0;
+  }
+  
+  .year-col {
+    font-size: 2rem;
+  }
+  
+  .content-col h3 {
+    font-size: 1.5rem;
+  }
+}

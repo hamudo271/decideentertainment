@@ -46,7 +46,7 @@
 }
 
 .org-section {
-  padding: 150px 40px;
+  padding: 200px 40px; /* More expensive spacing */
 }
 
 .content-wrapper {
@@ -55,11 +55,12 @@
 }
 
 .org-section h2 {
-  font-size: 3rem;
+  font-size: 4rem; /* Larger headers */
   font-weight: 900;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   text-align: center;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
+  color: #fff;
 }
 
 /* CEO Section Updated */
@@ -542,10 +543,11 @@
 }
 
 .huge-number {
-  font-size: 6rem;
+  font-size: 8rem; /* Massive impact */
   font-weight: 900;
   color: #3b82f6;
-  letter-spacing: -2px;
+  letter-spacing: -4px;
+  line-height: 1;
 }
 
 .invest-metrics {
@@ -597,7 +599,7 @@
   }
   
   .huge-number {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
   .ceo-image-col {
@@ -635,116 +637,128 @@
 
 /* Strategic Partnerships (The Unfair Advantage) */
 .strategy-section {
-  background-color: #080808;
+  background: 
+    linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7)),
+    url('/Users/dooya8787/.gemini/antigravity/brain/1464e227-3bff-41ab-ba66-72fe174f623c/neon_geometric_bg_1765320308636.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 200px 40px; /* Spacious */
 }
 
 .section-header-large {
-  margin-bottom: 80px;
-  border-left: 2px solid #333;
-  padding-left: 30px;
+  margin-bottom: 120px;
+  border-left: 4px solid #fff; /* Thicker accent */
+  padding-left: 40px;
 }
 
 .title-huge {
-  font-size: 4rem;
+  font-size: 6rem; /* Massive */
   font-weight: 900;
   color: #fff;
   line-height: 1;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
 }
 
 .subtitle-large {
-  font-size: 1.5rem;
-  color: #666;
+  font-size: 1.8rem;
+  color: #888;
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 .strategy-block {
-  margin-bottom: 100px;
-  padding: 60px;
-  background: #111;
+  margin-bottom: 150px; /* More space between blocks */
+  padding: 80px;
+  background: rgba(17, 17, 17, 0.8); /* Glassy dark */
   border-radius: 4px;
-  border: 1px solid #222;
+  border: 1px solid #333;
+  backdrop-filter: blur(10px);
 }
 
 .strategy-title {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 800;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-.text-blue { color: #0066ff; }
-.text-red { color: #ff0000; }
+.text-blue { color: #3b82f6; text-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+.text-red { color: #ef4444; text-shadow: 0 0 20px rgba(239, 68, 68, 0.3); }
 
 .strategy-sub {
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #fff;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-weight: 700;
 }
 
 .strategy-desc {
-  font-size: 1.2rem;
-  color: #aaa;
-  line-height: 1.7;
-  margin-bottom: 50px;
-  max-width: 900px;
+  font-size: 1.4rem;
+  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 60px;
+  max-width: 1000px;
 }
 
 .strategy-points {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  border-top: 1px solid #333;
-  padding-top: 40px;
+  gap: 60px;
+  border-top: 1px solid #444;
+  padding-top: 50px;
 }
 
 .point-item h5 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #fff;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-weight: 700;
 }
 
 .point-item p {
-  color: #888;
-  line-height: 1.6;
+  color: #999;
+  line-height: 1.7;
+  font-size: 1.1rem;
 }
 
 /* Key IP: Pre-School */
 .ip-section {
   background-color: #050505;
+  padding: 200px 40px;
 }
 
 .ip-content {
   background: #111;
-  padding: 60px;
+  padding: 80px;
   border-radius: 4px;
+  border: 1px solid #222;
 }
 
 .ip-slogan {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #3b82f6; /* Pre-school blue */
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   font-weight: 700;
   text-align: center;
+  line-height: 1.4;
 }
 
 .ip-features {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  margin-bottom: 60px;
+  gap: 80px;
+  margin-bottom: 80px;
 }
 
 .ip-feature-block h4 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #fff;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #333;
-  padding-bottom: 15px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 20px;
 }
 
 .ip-feature-block ul {
@@ -752,8 +766,8 @@
 }
 
 .ip-feature-block li {
-  margin-bottom: 15px;
-  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
   color: #ccc;
 }
 
@@ -764,27 +778,127 @@
 .ip-feature-row {
   text-align: center;
   background: #000;
-  padding: 40px;
-  border-radius: 8px;
+  padding: 60px;
+  border-radius: 12px;
+  border: 1px solid #222;
 }
 
 .ip-feature-row h4 {
   color: #fff;
-  margin-bottom: 20px;
-  font-size: 1.3rem;
+  margin-bottom: 40px;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
 }
 
 .model-badges {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .model-badges span {
-  background: #222;
+  background: #1a1a1a;
   color: #fff;
-  padding: 10px 25px;
-  border-radius: 30px;
+  padding: 15px 40px;
+  border-radius: 50px;
   font-weight: 600;
   border: 1px solid #333;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
 }
+
+.model-badges span:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+@media (max-width: 768px) {
+  /* Reduce Padding for Mobile */
+  .org-section, 
+  .strategy-section,
+  .ip-section {
+    padding: 100px 20px;
+  }
+
+  /* Clamp Excessive Typography */
+  .org-hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .org-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+  }
+
+  .title-huge {
+    font-size: 3rem; /* Clamp from 6rem */
+    letter-spacing: -1px;
+  }
+  
+  .subtitle-large {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+
+  /* Strategy Section Mobile */
+  .section-header-large {
+    margin-bottom: 60px;
+    padding-left: 20px;
+    border-left-width: 3px;
+  }
+
+  .strategy-block, .ip-content {
+    padding: 30px;
+  }
+
+  .strategy-title {
+    font-size: 2.2rem;
+  }
+  
+  .strategy-sub {
+    font-size: 1.3rem;
+  }
+  
+  .strategy-desc {
+    font-size: 1rem;
+  }
+
+  /* Investment Stats Mobile */
+  .huge-number {
+    font-size: 4rem; /* Clamp from 8rem */
+  }
+  
+  .investment-dashboard {
+    padding: 40px 20px;
+  }
+  
+  .invest-metrics {
+    gap: 30px;
+  }
+  
+  .metric-value {
+    font-size: 2rem;
+  }
+
+  /* IP Section Mobile */
+  .ip-slogan {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+
+  .ip-feature-block h4 {
+    font-size: 1.3rem;
+  }
+  
+  .model-badges {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .model-badges span {
+    width: 100%;
+    text-align: center;
+  }
+}
+

@@ -1,30 +1,68 @@
 .organization-page {
-  background-color: #050505;
+  background-image: url('/decideentertainment/twi001t2783726.jpg'); /* Fixed Path for GitHub Pages */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
   color: #fff;
   min-height: 100vh;
   padding-top: var(--header-height);
+  position: relative;
+  overflow: hidden; /* For noise overlay */
 }
 
-/* Hero Section */
+/* Cinematic Noise Overlay - The "High-End" Texture */
+.organization-page::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1; /* Above bg, below content */
+  opacity: 0.4;
+}
+
+.organization-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Lighter overlay for visibility */
+  z-index: 0;
+}
+
+/* Dynamic Keyframes for "Alive" Backgrounds */
+@keyframes subtle-zoom {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
 .org-hero {
-  height: 60vh;
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url('/Users/dooya8787/.gemini/antigravity/brain/1464e227-3bff-41ab-ba66-72fe174f623c/kpop_concert_1765319337855.png');
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), /* Very light gradient */
+    url('/decideentertainment/twi001t2783726.jpg'); /* Fixed Path */
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Parallax Effect */
+  background-attachment: fixed;
   position: relative;
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  animation: subtle-zoom 20s infinite alternate ease-in-out; /* Breathing effect */
 }
 
 .org-hero-content {
   text-align: center;
-  z-index: 1;
+  z-index: 2; /* Ensure above noise */
+  position: relative;
 }
 
 .org-hero-content h1 {
@@ -47,6 +85,8 @@
 
 .org-section {
   padding: 200px 40px; /* More expensive spacing */
+  position: relative;
+  z-index: 2;
 }
 
 .content-wrapper {
@@ -158,10 +198,11 @@
 
 /* Success Proof Box */
 .success-proof-box {
-  background-color: #1a1a1a;
+  background-color: rgba(26, 26, 26, 0.8);
   border: 1px solid #333;
   padding: 40px;
   border-radius: 8px;
+  backdrop-filter: blur(5px);
 }
 
 .success-proof-box h3 {
@@ -219,7 +260,7 @@
 }
 
 .network-card {
-  background-color: #1a1a1a; /* Dark card */
+  background-color: rgba(26, 26, 26, 0.6); /* Dark card */
   padding: 30px;
   border-radius: 8px;
   text-align: center;
@@ -227,11 +268,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 .network-card:hover {
   transform: translateY(-5px);
-  background-color: #222;
+  background-color: rgba(34, 34, 34, 0.8);
+  border-color: rgba(59,130,246,0.3);
 }
 
 .net-icon {
@@ -435,7 +478,7 @@
 
 /* Success Stats (Proven Formula) */
 .success-stats-section {
-  background-color: #000;
+  background-color: transparent; /* Changed from #000 */
 }
 
 .stats-grid {
@@ -445,11 +488,12 @@
 }
 
 .stat-card {
-  background: #080808;
+  background: rgba(8,8,8, 0.7);
   border: 1px solid #222;
   padding: 40px;
   border-radius: 4px;
   transition: transform 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .stat-card:hover {
@@ -501,12 +545,14 @@
 /* Executive Summary (Investment) */
 .executive-summary {
   background: 
-    linear-gradient(180deg, #000 0%, rgba(5,5,5,0.9) 50%, #111 100%),
-    url('/Users/dooya8787/.gemini/antigravity/brain/1464e227-3bff-41ab-ba66-72fe174f623c/kpop_stage_1765319353340.png');
+    linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, #111 100%),
+    url('/decideentertainment/tai00200002417.jpg'); /* Fixed Path */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   padding-bottom: 150px;
+  position: relative;
+  z-index: 2; /* Ensure above noise */
 }
 
 .center-align {
@@ -522,13 +568,14 @@
 }
 
 .investment-dashboard {
-  background: #050505;
+  background: rgba(5, 5, 5, 0.7);
   border: 1px solid #333;
   border-radius: 20px;
   padding: 80px;
   text-align: center;
   max-width: 1000px;
   margin: 0 auto;
+  backdrop-filter: blur(20px);
 }
 
 .invest-main-figure {
@@ -581,58 +628,6 @@
 .metric-sub {
   color: #444;
   font-size: 0.9rem;
-}
-
-@media (max-width: 1024px) {
-  .ceo-main-profile {
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .invest-metrics {
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  .huge-number {
-    font-size: 5rem;
-  }
-
-  .ceo-image-col {
-    width: 100%;
-    flex: auto;
-  }
-
-  .network-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .expert-profile {
-    flex-direction: column !important;
-    gap: 40px;
-  }
-  
-  .profile-image {
-    flex: auto;
-    width: 100%;
-    height: 400px;
-  }
-  
-  .business-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .org-hero-content h1 {
-     font-size: 3rem; 
-  }
-  
-  .strategy-points, .ip-features {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Strategic Partnerships (The Unfair Advantage) */
@@ -726,15 +721,16 @@
 
 /* Key IP: Pre-School */
 .ip-section {
-  background-color: #050505;
+  background-color: transparent;
   padding: 200px 40px;
 }
 
 .ip-content {
-  background: #111;
+  background: rgba(17, 17, 17, 0.6);
   padding: 80px;
   border-radius: 4px;
-  border: 1px solid #222;
+  border: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
 }
 
 .ip-slogan {
@@ -810,6 +806,58 @@
 .model-badges span:hover {
   border-color: #3b82f6;
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+@media (max-width: 1024px) {
+  .ceo-main-profile {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .invest-metrics {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .huge-number {
+    font-size: 5rem;
+  }
+
+  .ceo-image-col {
+    width: 100%;
+    flex: auto;
+  }
+
+  .network-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expert-profile {
+    flex-direction: column !important;
+    gap: 40px;
+  }
+  
+  .profile-image {
+    flex: auto;
+    width: 100%;
+    height: 400px;
+  }
+  
+  .business-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .org-hero-content h1 {
+     font-size: 3rem; 
+  }
+  
+  .strategy-points, .ip-features {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -901,4 +949,3 @@
     text-align: center;
   }
 }
-

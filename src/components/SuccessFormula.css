@@ -1,0 +1,151 @@
+.success-section {
+  background-color: #050505;
+  color: #fff;
+  padding: 160px 40px;
+  width: 100%;
+}
+
+.section-header {
+  max-width: var(--max-width);
+  margin: 0 auto 120px;
+  text-align: left;
+}
+
+.section-title {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+  display: inline-block;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #3b82f6;
+}
+
+.main-statement h3 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  line-height: 1.1;
+  background: linear-gradient(to right, #fff, #888);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  color: #888;
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Formula List Layout */
+.formula-list {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0; 
+  position: relative;
+}
+
+.formula-item {
+  flex: 1;
+  padding: 0 40px;
+  position: relative;
+}
+
+.separator {
+  width: 1px;
+  height: 300px;
+  background: linear-gradient(to bottom, #333, transparent);
+  margin-top: 20px;
+}
+
+.item-number {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #222;
+  display: block;
+  line-height: 1;
+  margin-bottom: 20px;
+  font-family: var(--font-primary);
+}
+
+.header-content h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.header-content .sub-text {
+  font-size: 1rem;
+  color: #999;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  min-height: 50px;
+}
+
+.item-details {
+  border-top: 1px solid #222;
+  padding-top: 25px;
+}
+
+.item-details h5 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.item-details ul {
+  list-style: none;
+}
+
+.item-details li {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 0;
+  transition: color 0.3s;
+}
+
+.item-details li:hover {
+  color: #3b82f6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .formula-list {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .formula-item {
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid #222;
+    padding-bottom: 40px;
+  }
+
+  .formula-item:last-child {
+    border-bottom: none;
+  }
+
+  .main-statement h3 {
+    font-size: 2.5rem;
+  }
+}

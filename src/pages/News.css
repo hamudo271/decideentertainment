@@ -1,0 +1,163 @@
+.news-page {
+  padding-top: var(--header-height);
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+.news-header {
+  padding: 80px 40px 60px;
+  text-align: center;
+}
+
+.news-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  letter-spacing: -1px;
+}
+
+.category-filters {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.category-filters button {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #888;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.category-filters button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: width 0.3s ease;
+}
+
+.category-filters button:hover,
+.category-filters button.active {
+  color: var(--text-primary);
+}
+
+.category-filters button.active::after {
+  width: 100%;
+}
+
+.news-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.news-table-header {
+  display: flex;
+  padding: 20px 0;
+  border-top: 2px solid var(--text-primary);
+  border-bottom: 1px solid #ddd;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.news-list-item {
+  display: flex;
+  padding: 25px 0;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.news-list-item:hover {
+  background-color: #fafafa;
+}
+
+.col-category {
+  width: 15%;
+  color: #888;
+  font-weight: 600;
+}
+
+.col-title {
+  width: 70%;
+  font-weight: 500;
+}
+
+.col-date {
+  width: 15%;
+  text-align: right;
+  color: #888;
+  font-family: monospace;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 60px;
+}
+
+.pagination button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  border-color: var(--text-primary);
+}
+
+.pagination button.active {
+  background-color: var(--text-primary);
+  color: white;
+  border-color: var(--text-primary);
+}
+
+.pagination button:disabled {
+  color: #ddd;
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .news-container {
+    padding: 0 20px;
+  }
+  
+  .news-table-header {
+    display: none;
+  }
+  
+  .news-list-item {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .col-category {
+    width: auto;
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    background: #f0f0f0;
+    border-radius: 4px;
+  }
+  
+  .col-title {
+    width: 100%;
+    order: 3;
+    margin-top: 5px;
+  }
+  
+  .col-date {
+    width: auto;
+    margin-left: auto;
+    font-size: 0.8rem;
+  }
+}

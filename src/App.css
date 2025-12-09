@@ -1,0 +1,15 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  padding-top: var(--header-height); /* Default padding for fixed header */
+}
+
+/* Remove padding on Home page so content starts at top */
+.app.home-page main {
+  padding-top: 0;
+}

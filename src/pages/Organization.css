@@ -1,0 +1,790 @@
+.organization-page {
+  background-color: #050505;
+  color: #fff;
+  min-height: 100vh;
+  padding-top: var(--header-height);
+}
+
+/* Hero Section */
+.org-hero {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url('/Users/dooya8787/.gemini/antigravity/brain/1464e227-3bff-41ab-ba66-72fe174f623c/kpop_concert_1765319337855.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax Effect */
+  position: relative;
+  border-bottom: 1px solid #111;
+}
+
+.org-hero-content {
+  text-align: center;
+  z-index: 1;
+}
+
+.org-hero-content h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  background: linear-gradient(to bottom, #fff, #666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+}
+
+.org-hero-content p {
+  font-size: 1.2rem;
+  letter-spacing: 8px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.org-section {
+  padding: 150px 40px;
+}
+
+.content-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.org-section h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 100px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+/* CEO Section Updated */
+.ceo-profile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.ceo-main-profile {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.ceo-image-col {
+  flex: 0 0 400px;
+  position: relative;
+}
+
+.placeholder-ceo-photo {
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(to bottom, #222, #111);
+  border-radius: 8px;
+}
+
+.ceo-name-overlay {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.ceo-name-overlay h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.ceo-name-overlay p {
+  color: #3b82f6;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.ceo-keywords {
+  list-style: none;
+}
+
+.ceo-keywords li {
+  color: #ccc;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.ceo-text-col {
+  flex: 1;
+}
+
+.ceo-titles {
+  margin-bottom: 40px;
+}
+
+.ceo-titles h2 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: left; /* Reset inheritance */
+}
+
+.kr-subtitle {
+  font-size: 1.2rem;
+  color: #888;
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.main-slogan {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.highlight-blue {
+  color: #3b82f6;
+}
+
+.sub-slogan {
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+/* Success Proof Box */
+.success-proof-box {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.success-proof-box h3 {
+  font-size: 1.2rem;
+  color: #3b82f6;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.proof-content h4 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.proof-content ul {
+  list-style: none;
+}
+
+.proof-content li {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.bullet {
+  color: #3b82f6;
+  margin-right: 8px;
+}
+
+/* Pan-Asia Network */
+.pan-asia-network {
+  margin-top: 40px;
+}
+
+.pan-asia-network h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 30px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.network-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.network-card {
+  background-color: #1a1a1a; /* Dark card */
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.network-card:hover {
+  transform: translateY(-5px);
+  background-color: #222;
+}
+
+.net-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.network-card h4 {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.net-partner {
+  color: #3b82f6;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.net-desc {
+  font-size: 0.95rem;
+  color: #aaa;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.net-tag {
+  background-color: #2a2a2a;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+/* Business Structure */
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px; /* Tight gap for grid look */
+  background-color: #222; /* Border color effect */
+  border: 1px solid #222;
+}
+
+.business-card {
+  background: #080808;
+  padding: 80px 40px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.business-card:hover {
+  background: #111;
+}
+
+.business-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.business-card p {
+  color: #888;
+  line-height: 1.6;
+}
+
+/* Reuse Leadership Styles from Company.css directly or redefine here */
+/* Ideally we import or copy, for now redefining to ensure isolation */
+
+.expert-profile {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 160px;
+  align-items: center;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 80px;
+}
+
+.expert-profile:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.expert-profile.reverse {
+  flex-direction: row-reverse;
+}
+
+.profile-image {
+  flex: 0 0 450px;
+  height: 550px;
+  background-color: #111;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.placeholder-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-header h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+}
+
+.role-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.profile-header h4 {
+  font-size: 3.5rem;
+  color: #fff;
+  margin-bottom: 30px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.profile-desc {
+  font-size: 1.2rem;
+  color: #888;
+  line-height: 1.7;
+}
+
+.profile-details {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border-top: 1px solid #1a1a1a;
+  padding-top: 40px;
+}
+
+.detail-block h5 {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.detail-block p {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.partners-text {
+  margin-top: 8px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* IP Expansion Badges */
+.model-badges-expanded {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.badge-item {
+  display: flex;
+  flex-direction: column;
+  background: #111;
+  padding: 20px 30px;
+  border-radius: 8px;
+  border: 1px solid #333;
+  width: 250px;
+}
+
+.badge-title {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.badge-desc {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Success Stats (Proven Formula) */
+.success-stats-section {
+  background-color: #000;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.stat-card {
+  background: #080808;
+  border: 1px solid #222;
+  padding: 40px;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  border-color: #333;
+}
+
+.stat-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 20px;
+}
+
+.stat-rank {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #3b82f6;
+  background: rgba(59, 130, 246, 0.1);
+  padding: 5px 15px;
+  border-radius: 50%;
+}
+
+.stat-header h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.stat-row .label {
+  color: #888;
+}
+
+.stat-row .value {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Executive Summary (Investment) */
+.executive-summary {
+  background: 
+    linear-gradient(180deg, #000 0%, rgba(5,5,5,0.9) 50%, #111 100%),
+    url('/Users/dooya8787/.gemini/antigravity/brain/1464e227-3bff-41ab-ba66-72fe174f623c/kpop_stage_1765319353340.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-bottom: 150px;
+}
+
+.center-align {
+  text-align: center;
+  border-left: none;
+  padding-left: 0;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(to right, #fff, #a8a8a8); /* Silver/White luxury look */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.investment-dashboard {
+  background: #050505;
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 80px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.invest-main-figure {
+  margin-bottom: 60px;
+}
+
+.invest-main-figure .label {
+  display: block;
+  font-size: 1.5rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.huge-number {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #3b82f6;
+  letter-spacing: -2px;
+}
+
+.invest-metrics {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #222;
+  padding-top: 40px;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.metric-label {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.metric-value {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.metric-value.highlight {
+  color: #3b82f6;
+}
+
+.metric-sub {
+  color: #444;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .ceo-main-profile {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .invest-metrics {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .huge-number {
+    font-size: 4rem;
+  }
+
+  .ceo-image-col {
+    width: 100%;
+    flex: auto;
+  }
+
+  .network-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expert-profile {
+    flex-direction: column !important;
+    gap: 40px;
+  }
+  
+  .profile-image {
+    flex: auto;
+    width: 100%;
+    height: 400px;
+  }
+  
+  .business-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .org-hero-content h1 {
+     font-size: 3rem; 
+  }
+  
+  .strategy-points, .ip-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Strategic Partnerships (The Unfair Advantage) */
+.strategy-section {
+  background-color: #080808;
+}
+
+.section-header-large {
+  margin-bottom: 80px;
+  border-left: 2px solid #333;
+  padding-left: 30px;
+}
+
+.title-huge {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+}
+
+.subtitle-large {
+  font-size: 1.5rem;
+  color: #666;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.strategy-block {
+  margin-bottom: 100px;
+  padding: 60px;
+  background: #111;
+  border-radius: 4px;
+  border: 1px solid #222;
+}
+
+.strategy-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.text-blue { color: #0066ff; }
+.text-red { color: #ff0000; }
+
+.strategy-sub {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.strategy-desc {
+  font-size: 1.2rem;
+  color: #aaa;
+  line-height: 1.7;
+  margin-bottom: 50px;
+  max-width: 900px;
+}
+
+.strategy-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  border-top: 1px solid #333;
+  padding-top: 40px;
+}
+
+.point-item h5 {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.point-item p {
+  color: #888;
+  line-height: 1.6;
+}
+
+/* Key IP: Pre-School */
+.ip-section {
+  background-color: #050505;
+}
+
+.ip-content {
+  background: #111;
+  padding: 60px;
+  border-radius: 4px;
+}
+
+.ip-slogan {
+  font-size: 2rem;
+  color: #3b82f6; /* Pre-school blue */
+  margin-bottom: 60px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.ip-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.ip-feature-block h4 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+}
+
+.ip-feature-block ul {
+  list-style: none;
+}
+
+.ip-feature-block li {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.simple-list li {
+  color: #888 !important;
+}
+
+.ip-feature-row {
+  text-align: center;
+  background: #000;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.ip-feature-row h4 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+.model-badges {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.model-badges span {
+  background: #222;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  border: 1px solid #333;
+}

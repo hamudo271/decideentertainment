@@ -1,0 +1,290 @@
+.company-page {
+  padding-top: var(--header-height);
+}
+
+.company-hero {
+  height: 60vh;
+  background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.company-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.company-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--text-white);
+}
+
+.company-hero-content h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 10px;
+  margin-bottom: 20px;
+}
+
+.company-hero-content p {
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+  font-weight: 300;
+}
+
+.company-section {
+  padding: 100px 40px;
+}
+
+.company-section:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.content-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.company-section h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 60px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+/* Philosophy */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.philosophy-item {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.philosophy-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.philosophy-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.philosophy-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* History */
+.history-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  border-left: 2px solid #ddd;
+  padding-left: 40px;
+}
+
+.history-item {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.history-item::before {
+  content: '';
+  position: absolute;
+  left: -49px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: var(--text-primary);
+  border-radius: 50%;
+  border: 4px solid white;
+}
+
+.history-item .year {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.history-item .events p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* Business */
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.business-card {
+  background: #1a1a1a;
+  color: white;
+  padding: 50px 30px;
+  text-align: center;
+}
+
+.business-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.business-card p {
+  color: #aaa;
+  line-height: 1.6;
+}
+
+/* Leadership Section */
+.leadership {
+  background-color: #0d0d0d;
+}
+
+.expert-profile {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 160px;
+  align-items: center; /* Center alignment for modern feel */
+  /* Border removed */
+  padding-bottom: 0;
+  text-align: left;
+}
+
+.expert-profile.reverse {
+  flex-direction: row-reverse;
+}
+
+.profile-image {
+  flex: 0 0 450px;
+  height: 600px;
+  border-radius: 4px; /* Slightly easier radius */
+  overflow: hidden;
+  background-color: #222;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5); /* Strong shadow for depth */
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-header h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.role-badge {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.profile-header h4 {
+  font-size: 3rem; /* Larger, bolder title */
+  color: #fff;
+  margin-bottom: 25px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.profile-desc {
+  font-size: 1.1rem;
+  color: #888;
+  line-height: 1.7;
+  max-width: 90%;
+}
+
+.profile-details {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-top: 1px solid #222;
+  padding-top: 30px;
+}
+
+.detail-block {
+  /* Removed frame/background */
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+
+.detail-block h5 {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.detail-block p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.partners-text {
+  margin-top: 5px;
+  color: #fff; /* White for partners to stand out */
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .expert-profile {
+    flex-direction: column !important; /* Force stack on mobile */
+    gap: 40px;
+    margin-bottom: 100px;
+  }
+  
+  .profile-image {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 500px;
+  }
+
+  .profile-header h4 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .philosophy-grid, .business-grid {
+    grid-template-columns: 1fr;
+  }
+}

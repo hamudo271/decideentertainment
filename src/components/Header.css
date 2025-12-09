@@ -1,0 +1,199 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 1000;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+  display: flex;
+  align-items: center;
+  color: var(--text-white);
+  padding: 0 40px;
+}
+
+.header.scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--text-primary);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  z-index: 1001; /* Ensure logo is above overlay */
+  position: relative;
+}
+
+/* Navigation Menu - Always Overlay */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #111; /* Dark background like reference */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1000;
+}
+
+.nav-menu.active {
+  transform: translateY(0);
+}
+
+.nav-menu ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  
+  /* Hidden state */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-top: 0;
+  
+  /* Smooth transition */
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              margin-top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* For simplicity in the mobile overlay menu, just show them small below */
+.nav-item:hover .submenu,
+.nav-item.has-submenu:hover .submenu {
+  max-height: 200px; /* Sufficient height for content */
+  opacity: 1;
+  margin-top: 20px;
+}
+
+.submenu a {
+  font-size: 1.2rem; /* Smaller than main link */
+  color: #888;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px); /* Start slightly down */
+}
+
+.nav-item:hover .submenu a,
+.nav-item.has-submenu:hover .submenu a {
+  transform: translateY(0);
+}
+
+.submenu a:hover {
+  color: #fff;
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+.nav-menu a {
+  font-size: 3rem; /* Large font for impact */
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff; /* White text on dark bg */
+  position: relative;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+}
+
+.nav-menu a:hover {
+  opacity: 0.5;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 1001; /* Ensure buttons are above overlay */
+  position: relative;
+}
+
+.lang-btn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: inherit;
+}
+
+/* Hamburger Button */
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 30px;
+  cursor: pointer;
+  color: inherit; /* Inherit color from header (white or black) */
+}
+
+.menu-btn span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hamburger Animation */
+.menu-btn.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  background-color: #fff; /* White on dark overlay */
+}
+
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background-color: #fff; /* White on dark overlay */
+}
+
+/* Ensure Logo is white when menu is open */
+.header.menu-open .logo a {
+  color: #fff;
+}
+
+.header.menu-open .lang-btn {
+  color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
+  
+  .nav-menu a {
+    font-size: 2rem;
+    gap: 30px;
+  }
+}

@@ -1,0 +1,130 @@
+.audition-page {
+  padding-top: var(--header-height);
+}
+
+.audition-hero {
+  height: 50vh;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.audition-hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.audition-hero p {
+  font-size: 1.2rem;
+  letter-spacing: 8px;
+}
+
+.audition-info {
+  padding: 100px 40px;
+  background-color: #f9f9f9;
+}
+
+.info-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.info-block {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.info-block h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.info-block h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: var(--text-primary);
+}
+
+.info-block > p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.category-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  text-align: left;
+}
+
+.category-list li {
+  background: white;
+  padding: 40px;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease;
+}
+
+.category-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.category-list h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.category-list p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.apply-section {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.apply-btn {
+  background-color: var(--text-primary);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 20px 60px;
+  border-radius: 50px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.apply-btn:hover {
+  transform: scale(1.05);
+  background-color: black;
+}
+
+.note {
+  margin-top: 20px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .audition-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .category-list {
+    grid-template-columns: 1fr;
+  }
+}

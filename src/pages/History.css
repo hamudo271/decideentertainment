@@ -1,0 +1,254 @@
+.history-page {
+  background-color: #050505;
+  color: #fff;
+  min-height: 100vh;
+  padding-top: var(--header-height);
+}
+
+.hist-hero {
+  height: 50vh;
+  background-color: #080808;
+  display: flex;
+  align-items: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)),
+    url('/Users/dooya8787/.gemini/antigravity/brain/1464e227-3bff-41ab-ba66-72fe174f623c/kpop_concert_1765319337855.png');
+  background-size: cover;
+  background-position: center 30%; /* Focus on different part of image */
+  background-attachment: fixed;
+  position: relative;
+}
+
+.hist-hero-content {
+  text-align: center;
+}
+
+.hist-hero-content h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  background: linear-gradient(to bottom, #fff, #666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+}
+
+.hist-hero-content p {
+  font-size: 1.2rem;
+  letter-spacing: 8px;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.hist-section {
+  padding: 160px 40px;
+}
+
+.philosophy-intro {
+  margin-bottom: 100px;
+}
+
+.philosophy-intro h2 {
+  font-size: 1rem;
+  color: #3b82f6;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.phil-main-text {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #444;
+  letter-spacing: -1px;
+}
+
+.phil-main-text .text-white {
+  color: #fff;
+}
+
+.philosophy-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  border-top: 1px solid #222;
+  padding-top: 60px;
+}
+
+.phil-card {
+  flex: 1;
+}
+
+.phil-card h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.phil-card p {
+  color: #888;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Future Roadmap */
+.future-roadmap {
+  background: 
+    linear-gradient(to bottom, #050505, rgba(10,10,10,0.9)),
+    url('/Users/dooya8787/.gemini/antigravity/brain/1464e227-3bff-41ab-ba66-72fe174f623c/kpop_stage_1765319353340.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding-bottom: 100px;
+}
+
+/* Global Network */
+.network-section {
+  background-color: #0a0a0a;
+}
+
+.network-block {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 120px;
+  align-items: center;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 80px;
+}
+
+.network-block:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.network-block.reverse {
+  flex-direction: row-reverse;
+}
+
+.network-image {
+  flex: 0 0 500px;
+  height: 400px;
+  background-color: #222;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.net-overlay-text {
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.1);
+  letter-spacing: 5px;
+  z-index: 1;
+}
+
+.network-info {
+  flex: 1;
+}
+
+.network-info h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.highlight-blue {
+  color: #3b82f6;
+}
+
+.net-main-desc {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.net-details p {
+  font-size: 1.1rem;
+  color: #888;
+  line-height: 1.7;
+  max-width: 90%;
+}
+
+@media (max-width: 1024px) {
+  .network-block, .network-block.reverse {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .network-image {
+    width: 100%;
+    flex: auto;
+  }
+}
+
+/* Timeline */
+.timeline-section h2 {
+  font-size: 10rem; /* Massive background-like title */
+  font-weight: 900;
+  color: #111;
+  margin-bottom: -50px; /* Overlap */
+  position: relative;
+  z-index: 0;
+  opacity: 0.5;
+  letter-spacing: -5px;
+}
+
+.timeline-container {
+  position: relative;
+  z-index: 1;
+  padding-left: 100px; /* Offset */
+}
+
+.history-row {
+  display: flex;
+  gap: 100px;
+  padding: 60px 0;
+  border-bottom: 1px solid #1a1a1a;
+  transition: background 0.3s;
+}
+
+.history-row:hover {
+  background: linear-gradient(to right, transparent, #0a0a0a);
+}
+
+.year-col {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #fff;
+  font-feature-settings: "tnum";
+}
+
+.content-col h3 {
+  font-size: 2rem;
+  color: #3b82f6;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.content-col p {
+  font-size: 1.2rem;
+  color: #888;
+  max-width: 500px;
+}
+
+@media (max-width: 1024px) {
+  .hist-hero-content h1 { font-size: 3rem; }
+  .phil-main-text { font-size: 2.5rem; }
+  .philosophy-list { flex-direction: column; gap: 60px; }
+  .timeline-section h2 { font-size: 5rem; margin-bottom: 20px; }
+  .timeline-container { padding-left: 0; }
+  .history-row { flex-direction: column; gap: 20px; }
+}

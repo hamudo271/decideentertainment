@@ -33,6 +33,11 @@ const ProfileItem = ({ imageGradient, name, role, title, englishTitle, desc, det
 
 const Organization = () => {
   const { ref: ceoRef, isVisible: ceoVisible } = useScrollReveal(0.1);
+  const { ref: strat1Ref, isVisible: strat1Visible } = useScrollReveal(0.1);
+  const { ref: strat2Ref, isVisible: strat2Visible } = useScrollReveal(0.1);
+  const { ref: ipRef, isVisible: ipVisible } = useScrollReveal(0.1);
+  const { ref: statsRef, isVisible: statsVisible } = useScrollReveal(0.1);
+  const { ref: execRef, isVisible: execVisible } = useScrollReveal(0.1);
 
   return (
     <div className="organization-page">
@@ -162,7 +167,7 @@ const Organization = () => {
              <p className="subtitle-large">독점적 성공 인프라</p>
           </div>
 
-          <div className="strategy-block fade-up">
+          <div ref={strat1Ref} className={`strategy-block fade-up ${strat1Visible ? 'visible' : ''}`}>
             <div className="strategy-content">
                <h3 className="strategy-title text-blue">The Unprecedented Choice</h3>
                <h4 className="strategy-sub">CJ ENM은 왜 '신생 기획사' DECIDE를 선택했는가?</h4>
@@ -183,7 +188,7 @@ const Organization = () => {
             </div>
           </div>
 
-          <div className="strategy-block fade-up">
+          <div ref={strat2Ref} className={`strategy-block fade-up ${strat2Visible ? 'visible' : ''}`}>
             <div className="strategy-content">
                <h3 className="strategy-title text-red">The Hit-Maker's Choice</h3>
                <h4 className="strategy-sub">왜 '제우스웍스'는 DECIDE와 함께하는가?</h4>
@@ -213,7 +218,7 @@ const Organization = () => {
              <p className="subtitle-large">프로젝트 '프리스쿨': 지속 가능한 IP의 탄생</p>
           </div>
           
-          <div className="ip-content fade-up">
+          <div ref={ipRef} className={`ip-content fade-up ${ipVisible ? 'visible' : ''}`}>
             <h3 className="ip-slogan">단순한 서바이벌을 넘어, 데뷔 전 팬덤과 수익을 확보하는 치밀한 설계</h3>
             
             <div className="ip-features">
@@ -253,6 +258,116 @@ const Organization = () => {
                    <span className="badge-title">게임 & 인터랙티브</span>
                    <span className="badge-desc">팬 참여형 몰입 경험 제공</span>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Formula (Proven Stats) - Re-added due to missing */}
+      <section className="org-section success-stats-section">
+        <div className="content-wrapper">
+          <div className="section-header-large">
+             <h2 className="title-huge">THE PROVEN FORMULA</h2>
+             <p className="subtitle-large">성공 보증수표: CJ ENM의 승리 방정식</p>
+          </div>
+
+          <div ref={statsRef} className={`stats-grid fade-up ${statsVisible ? 'visible' : ''}`}>
+            <div className="stat-card">
+              <div className="stat-header">
+                <span className="stat-rank">01</span>
+                <h4>Wanna One</h4>
+              </div>
+              <div className="stat-body">
+                <div className="stat-row">
+                  <span className="label">매출</span>
+                  <span className="value">900억원</span>
+                </div>
+                <div className="stat-row">
+                  <span className="label">순이익</span>
+                  <span className="value">440억원</span>
+                </div>
+                <div className="stat-row">
+                  <span className="label">앨범 판매</span>
+                  <span className="value">70만장</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="stat-card">
+              <div className="stat-header">
+                <span className="stat-rank">02</span>
+                <h4>ENHYPEN</h4>
+              </div>
+              <div className="stat-body">
+                <div className="stat-row">
+                  <span className="label">연매출</span>
+                  <span className="value">599억원</span>
+                </div>
+                <div className="stat-row">
+                  <span className="label">초동 판매</span>
+                  <span className="value">143만장</span>
+                </div>
+                <div className="stat-row">
+                  <span className="label">성장 속도</span>
+                  <span className="value">도쿄돔 입성</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="stat-card">
+              <div className="stat-header">
+                <span className="stat-rank">03</span>
+                <h4>ZB1</h4>
+              </div>
+              <div className="stat-body">
+                <div className="stat-row">
+                  <span className="label">아티스트 가치</span>
+                  <span className="value">2,900억원</span>
+                </div>
+                <div className="stat-row">
+                  <span className="label">데뷔 선주문</span>
+                  <span className="value">78만장</span>
+                </div>
+                <div className="stat-row">
+                  <span className="label">판매 성과</span>
+                  <span className="value">124만장</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Executive Summary (Investment) - Re-added due to missing */}
+      <section className="org-section executive-summary">
+        <div className="content-wrapper">
+          <div className="section-header-large center-align">
+             <h2 className="title-huge text-gradient-gold">EXECUTIVE SUMMARY</h2>
+             <p className="subtitle-large">투자 요약 및 예상 수익</p>
+          </div>
+
+          <div ref={execRef} className={`investment-dashboard fade-up ${execVisible ? 'visible' : ''}`}>
+            <div className="invest-main-figure">
+              <span className="label">총 제작비 (Total Cost)</span>
+              <span className="value huge-number">70억 원</span>
+            </div>
+            
+            <div className="invest-metrics">
+              <div className="metric-item">
+                <span className="metric-label">기대 수익 (ROI)</span>
+                <span className="metric-value highlight">1,004%</span>
+                <span className="metric-sub">5년 누적 기준</span>
+              </div>
+              <div className="metric-item">
+                <span className="metric-label">BEP 달성</span>
+                <span className="metric-value">2.5년</span>
+                <span className="metric-sub">내</span>
+              </div>
+              <div className="metric-item">
+                <span className="metric-label">EXIT 목표</span>
+                <span className="metric-value">3~5년</span>
+                <span className="metric-sub">내</span>
               </div>
             </div>
           </div>

@@ -32,9 +32,21 @@
 }
 
 .social-links a {
-  color: var(--text-white);
-  font-weight: 600;
-  font-size: 0.9rem;
+  color: #888; /* Standard icon color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #fff; /* White on hover */
+  transform: translateY(-3px); /* Subtle lift */
+}
+
+.social-links svg {
+  width: 24px;
+  height: 24px;
 }
 
 .footer-links {

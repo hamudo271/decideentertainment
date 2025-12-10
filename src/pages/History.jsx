@@ -19,6 +19,8 @@ const HistoryItem = ({ year, title, desc }) => {
 const History = () => {
   return (
     <div className="history-page">
+      <SubMenu />
+      <div style={{ marginTop: '50px' }}></div>
       <section className="hist-hero">
          <div className="hist-hero-content">
            <h1>HISTORY</h1>

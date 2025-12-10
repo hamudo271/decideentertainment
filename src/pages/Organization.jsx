@@ -1,6 +1,8 @@
 import React from 'react';
 import './Organization.css';
 import useScrollReveal from '../hooks/useScrollReveal';
+import SubMenu from '../components/SubMenu';
+
 
 // Reusable Profile Item Component (Internal for now)
 const ProfileItem = ({ imageGradient, name, role, title, englishTitle, desc, details, isReverse }) => {

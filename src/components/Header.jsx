@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
-
 import { useLanguage } from '../context/LanguageContext';
 
 const Header = () => {
@@ -80,10 +79,6 @@ const Header = () => {
             <span></span>
           </button>
         </div>
-      </div>
-    </header>
-  );
-};
       </div>
     </header>
   );

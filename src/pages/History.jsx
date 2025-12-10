@@ -1,5 +1,6 @@
 import React from 'react';
 import './History.css';
+import SubMenu from '../components/SubMenu';
 import useScrollReveal from '../hooks/useScrollReveal';
 
 const HistoryItem = ({ year, title, desc }) => {

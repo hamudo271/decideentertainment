@@ -1,5 +1,5 @@
 .history-page {
-  background-image: url('../assets/tai00200002406.jpg'); /* Relative Path */
+  background-image: url('/decideentertainment/tai00200002406.jpg'); /* Fixed Path */
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -49,7 +49,7 @@
   text-align: center;
   background-image: 
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
-    url('../assets/tai00200002406.jpg'); /* Relative Path */
+    url('/decideentertainment/tai00200002406.jpg'); /* Fixed Path */
   background-size: cover;
   background-position: center 30%; /* Focus on different part of image */
   background-attachment: fixed;
@@ -140,7 +140,7 @@
 .future-roadmap {
   background: 
     linear-gradient(to bottom, transparent, rgba(10,10,10,0.8)),
-    url('../assets/twi001t2986914.jpg'); /* Relative Path */
+    url('/decideentertainment/twi001t2986914.jpg'); /* Fixed Path */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

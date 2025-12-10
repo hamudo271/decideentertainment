@@ -1,5 +1,5 @@
 .organization-page {
-  background-image: url('../assets/twi001t2783726.jpg'); /* Relative path for Vite */
+  background-image: url('/decideentertainment/twi001t2783726.jpg'); /* Fixed Path for GitHub Pages */
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -50,7 +50,7 @@
   text-align: center;
   background:
     linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), /* Very light gradient */
-    url('../assets/twi001t2783726.jpg'); /* Relative Path */
+    url('/decideentertainment/twi001t2783726.jpg'); /* Fixed Path */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -546,7 +546,7 @@
 .executive-summary {
   background: 
     linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, #111 100%),
-    url('../assets/tai00200002417.jpg'); /* Relative Path */
+    url('/decideentertainment/tai00200002417.jpg'); /* Fixed Path */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

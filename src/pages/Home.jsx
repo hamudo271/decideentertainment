@@ -1,15 +1,14 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import SuccessStats from '../components/SuccessStats';
-import ExecutiveSummary from '../components/ExecutiveSummary';
+import SuccessFormula from '../components/SuccessFormula';
+import Artists from '../components/Artists';
 import News from '../components/News';
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <SuccessStats />
-      <ExecutiveSummary />
+      <SuccessFormula />
       <News />
     </>
   );

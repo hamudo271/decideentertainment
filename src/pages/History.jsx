@@ -20,7 +20,7 @@ const History = () => {
   return (
     <div className="history-page">
       <SubMenu />
-      <div style={{ marginTop: '50px' }}></div>
+      {/* Spacer removed for full background coverage */}
       <section className="hist-hero">
          <div className="hist-hero-content">
            <h1>HISTORY</h1>

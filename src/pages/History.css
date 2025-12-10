@@ -2,7 +2,7 @@
   background-color: #000;
   color: #fff;
   min-height: 100vh;
-  padding-top: var(--header-height);
+  padding-top: 0; /* Changed from variable to 0 for full screen hero */
   position: relative;
   overflow: hidden;
 }

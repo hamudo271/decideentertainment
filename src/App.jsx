@@ -18,15 +18,17 @@ import { HashRouter as Router, Routes, Route, useLocation, Navigate } from 'reac
       <div className={`app ${isHome ? 'home-page' : ''}`}>
         <Header />
         <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/company" element={<Navigate to="/company/organization" replace />} />
-            <Route path="/company/organization" element={<Organization />} />
-            <Route path="/company/history" element={<History />} />
-            <Route path="/artists" element={<Artists />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/audition" element={<Audition />} />
-          </Routes>
+          <div key={location.pathname} className="fade-enter-active">
+            <Routes location={location}>
+              <Route path="/" element={<Home />} />
+              <Route path="/company" element={<Navigate to="/company/organization" replace />} />
+              <Route path="/company/organization" element={<Organization />} />
+              <Route path="/company/history" element={<History />} />
+              <Route path="/artists" element={<Artists />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/audition" element={<Audition />} />
+            </Routes>
+          </div>
         </main>
         <Footer />
       </div>

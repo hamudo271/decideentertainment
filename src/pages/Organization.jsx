@@ -44,8 +44,8 @@ const Organization = () => {
   return (
     <div className="organization-page">
       <SubMenu />
-      {/* Spacer for fixed submenu */}
-      <div style={{ marginTop: '50px' }}></div> 
+      <SubMenu />
+      {/* Spacer removed for full background coverage */}
       
       <section className="org-hero">
         <div className="org-hero-content">

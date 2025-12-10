@@ -40,7 +40,7 @@
 }
 
 .org-hero {
-  height: 100vh;
+  height: 70vh; /* Reduced height by user request */
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 import './SubMenu.css';
 
 const SubMenu = () => {
   const location = useLocation();
   const currentPath = location.pathname;
+  const { t } = useLanguage();
 
   return (
     <div className="submenu-container">
@@ -13,13 +15,13 @@ const SubMenu = () => {
           to="/company/organization" 
           className={`submenu-item ${currentPath === '/company/organization' ? 'active' : ''}`}
         >
-          ORGANIZATION
+          {t('submenu.organization')}
         </Link>
         <Link 
           to="/company/history" 
           className={`submenu-item ${currentPath === '/company/history' ? 'active' : ''}`}
         >
-          HISTORY
+          {t('submenu.history')}
         </Link>
       </div>
     </div>

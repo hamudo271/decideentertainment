@@ -13,9 +13,9 @@
 }
 
 .header.scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
-  color: var(--text-primary);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  background-color: rgba(0, 0, 0, 0.9); /* High-End Dark mode preferred */
+  color: var(--text-white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 .header-container {
@@ -32,7 +32,7 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  z-index: 1001; /* Ensure logo is above overlay */
+  z-index: 1001;
   position: relative;
 }
 
@@ -43,7 +43,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #111; /* Dark background like reference */
+  background-color: #111;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,33 +75,28 @@
   flex-direction: column;
   gap: 15px;
   text-align: center;
-  
-  /* Hidden state */
   max-height: 0;
   opacity: 0;
   overflow: hidden;
   margin-top: 0;
-  
-  /* Smooth transition */
   transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
               opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
               margin-top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* For simplicity in the mobile overlay menu, just show them small below */
 .nav-item:hover .submenu,
 .nav-item.has-submenu:hover .submenu {
-  max-height: 200px; /* Sufficient height for content */
+  max-height: 200px;
   opacity: 1;
   margin-top: 20px;
 }
 
 .submenu a {
-  font-size: 1.2rem; /* Smaller than main link */
+  font-size: 1.2rem;
   color: #888;
   letter-spacing: 1px;
   transition: color 0.3s ease, transform 0.3s ease;
-  transform: translateY(20px); /* Start slightly down */
+  transform: translateY(20px);
 }
 
 .nav-item:hover .submenu a,
@@ -116,10 +111,10 @@
 }
 
 .nav-menu a {
-  font-size: 3rem; /* Large font for impact */
+  font-size: 3rem;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #fff; /* White text on dark bg */
+  color: #fff;
   position: relative;
   text-transform: uppercase;
   transition: opacity 0.3s ease;
@@ -134,7 +129,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  z-index: 1001; /* Ensure buttons are above overlay */
+  z-index: 1001;
   position: relative;
 }
 
@@ -142,6 +137,42 @@
   font-size: 0.9rem;
   font-weight: 600;
   color: inherit;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 5px 12px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: #fff;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: rgba(0,0,0,0.9);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 10px 0;
+  min-width: 100px;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.lang-dropdown li {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.lang-dropdown li:hover, .lang-dropdown li.active {
+  color: #fff;
+  background: rgba(255,255,255,0.05);
 }
 
 /* Hamburger Button */
@@ -151,7 +182,7 @@
   gap: 6px;
   width: 30px;
   cursor: pointer;
-  color: inherit; /* Inherit color from header (white or black) */
+  color: inherit;
 }
 
 .menu-btn span {
@@ -162,10 +193,9 @@
   transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
 }
 
-/* Hamburger Animation */
 .menu-btn.open span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
-  background-color: #fff; /* White on dark overlay */
+  background-color: #fff;
 }
 
 .menu-btn.open span:nth-child(2) {
@@ -174,19 +204,18 @@
 
 .menu-btn.open span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
-  background-color: #fff; /* White on dark overlay */
+  background-color: #fff;
 }
 
-/* Ensure Logo is white when menu is open */
 .header.menu-open .logo a {
   color: #fff;
 }
 
 .header.menu-open .lang-btn {
   color: #fff;
+  border-color: rgba(255,255,255,0.5);
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
   .header {
     padding: 0 20px;

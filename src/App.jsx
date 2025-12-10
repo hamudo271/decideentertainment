@@ -35,12 +35,16 @@ import { HashRouter as Router, Routes, Route, useLocation, Navigate } from 'reac
     );
   };
 
+  import { LanguageProvider } from './context/LanguageContext';
+
   function App() {
     return (
-      <Router>
-        <ScrollToTop />
-        <MainContent />
-      </Router>
+      <LanguageProvider>
+        <Router>
+          <ScrollToTop />
+          <MainContent />
+        </Router>
+      </LanguageProvider>
     );
   }
 
